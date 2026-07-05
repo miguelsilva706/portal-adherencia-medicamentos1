@@ -1,0 +1,30 @@
+.en-construccion {
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 56px 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.en-construccion-icono {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.en-construccion h2 {
+  margin: 0 0 6px;
+  color: var(--color-text);
+  font-size: 18px;
+}
+
+.en-construccion-badge {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+}

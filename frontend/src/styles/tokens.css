@@ -1,0 +1,53 @@
+:root {
+  /* Paleta basada en el diseño de Figma: azul primario, fondos claros neutros */
+  --color-primary: #2F6BFF;
+  --color-primary-hover: #1E56E0;
+  --color-primary-soft: #EAF0FF;
+
+  --color-success: #17A673;
+  --color-success-soft: #E4F7EF;
+  --color-warning: #E2A413;
+  --color-warning-soft: #FFF6E0;
+  --color-danger: #E24C4C;
+  --color-danger-soft: #FDEAEA;
+
+  --color-bg: #F4F6FB;
+  --color-surface: #FFFFFF;
+  --color-border: #E4E8F1;
+
+  --color-text: #1B2233;
+  --color-text-muted: #6B7280;
+  --color-text-soft: #9AA3B2;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 1px 2px rgba(20, 26, 45, 0.04), 0 8px 24px rgba(20, 26, 45, 0.06);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --sidebar-width: 250px;
+  --topbar-height: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--color-primary-soft); }

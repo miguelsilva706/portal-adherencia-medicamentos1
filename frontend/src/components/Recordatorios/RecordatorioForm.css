@@ -1,0 +1,126 @@
+.recordatorio-form{
+
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+
+}
+
+.form-grid{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+
+}
+
+.form-group{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    font-size:14px;
+    font-weight:600;
+    color:#334155;
+    margin-bottom:8px;
+
+}
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+    height:48px;
+
+    border:1px solid #dbe3ea;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    background:#fff;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    box-sizing:border-box;
+
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.check-group{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    height:48px;
+
+    margin-top:6px;
+
+}
+
+.check-group input{
+
+    width:20px;
+    height:20px;
+
+}
+
+.btn-guardar{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn-guardar:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-1px);
+
+}
+
+@media(max-width:768px){
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
