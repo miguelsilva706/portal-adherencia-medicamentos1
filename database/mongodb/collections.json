@@ -1,0 +1,37 @@
+{
+  "database": "adherencia_historial",
+  "description": "MongoDB se usa para historial de cumplimiento, trazabilidad, eventos y alertas omitidas (datos de alta frecuencia de escritura, sin necesidad de relaciones estrictas).",
+  "collections": {
+    "historial_tomas": {
+      "description": "Un documento por cada toma registrada u omitida de un medicamento.",
+      "schema_ejemplo": {
+        "_id": "ObjectId",
+        "pacienteId": "Long (referencia a MySQL: pacientes.id)",
+        "medicamentoId": "Long (referencia a MySQL: medicamentos.id)",
+        "recordatorioId": "Long (referencia a MySQL: recordatorios.id)",
+        "nombreMedicamento": "String",
+        "dosis": "String",
+        "estado": "String (COMPLETADO | OMITIDO | RETRASADO)",
+        "horaProgramada": "ISODate",
+        "horaRegistrada": "ISODate",
+        "observaciones": "String",
+        "creadoEn": "ISODate"
+      },
+      "indices_recomendados": [
+        { "campo": "pacienteId", "tipo": "ascendente" },
+        { "campo": "horaRegistrada", "tipo": "descendente" }
+      ]
+    },
+    "eventos_sistema": {
+      "description": "Bitácora de eventos relevantes (alertas enviadas, notificaciones fallidas, accesos) para trazabilidad. Se implementará junto con el módulo de notificaciones.",
+      "schema_ejemplo": {
+        "_id": "ObjectId",
+        "tipo": "String (NOTIFICACION_ENVIADA | NOTIFICACION_FALLIDA | ALERTA_INCUMPLIMIENTO | ACCESO)",
+        "usuarioId": "Long",
+        "canal": "String (PUSH | EMAIL | WHATSAPP)",
+        "detalle": "String",
+        "creadoEn": "ISODate"
+      }
+    }
+  }
+}
